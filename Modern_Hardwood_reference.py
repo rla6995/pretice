@@ -9,9 +9,9 @@ import re
 import numpy as np
 Modern_Hardwood=[]
 sub_wood=[]
-alpabet=[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,26]
+alpabet=[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,26,99]
 wd = webdriver.Chrome()
-wd.get("https://insidewood.lib.ncsu.edu/taxtree/typeofwood/FH/letter/a/taxtype/family?1")
+wd.get("https://insidewood.lib.ncsu.edu/taxtree/typeofwood/MH/letter/a/taxtype/family?1")
 for var in alpabet:
     ps = wd.page_source
     code = bs(ps)
@@ -97,8 +97,9 @@ for var in alpabet:
         else:
             pass
         wd.back()
-    wd.find_element(By.XPATH, (f"/html/body/table[3]/tbody/tr/td[4]/table[1]/tbody/tr/td[{var}]/a")).click()
-    time.sleep(5)
+    if var != 99:
+        wd.find_element(By.XPATH, (f"/html/body/table[3]/tbody/tr/td[4]/table[1]/tbody/tr/td[{var}]/a")).click()
+        time.sleep(5)
 a=[]
 b=[]        
 c=[]
