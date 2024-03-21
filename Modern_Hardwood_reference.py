@@ -1,12 +1,8 @@
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import time
 from bs4 import BeautifulSoup as bs
-import re
-import numpy as np
 Modern_Hardwood=[]
 sub_wood=[]
 alpabet=[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,26,99]
