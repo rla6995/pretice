@@ -10,7 +10,7 @@ Modern_Softwood=[]
 alpabet=[3,16,19,20,99]
 # 웹 드라이버 실행
 wd = webdriver.Chrome()
-wd.get("https://insidewood.lib.ncsu.edu/taxtree/typeofwood/MH/letter/a/taxtype/family?1")
+wd.get("https://insidewood.lib.ncsu.edu/taxtree/typeofwood/MS/letter/a/taxtype/family?1")
 for var in alpabet:
     # 페이지 파싱 후 목록 추출
     ps = wd.page_source
