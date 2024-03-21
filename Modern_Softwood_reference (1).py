@@ -9,7 +9,7 @@ import re
 import numpy as np
 Modern_Softwood=[]
 sub_wood=[]
-alpabet=[3,16,19,20]
+alpabet=[3,16,19,20,99]
 wd = webdriver.Chrome()
 wd.get("https://insidewood.lib.ncsu.edu/taxtree/typeofwood/MS/letter/a/taxtype/family?1")
 for var in alpabet:
@@ -97,8 +97,9 @@ for var in alpabet:
         else:
             pass
         wd.back()
-    wd.find_element(By.XPATH, (f"/html/body/table[3]/tbody/tr/td[4]/table[1]/tbody/tr/td[{var}]/a")).click()
-    time.sleep(5)
+    if var != 99:
+        wd.find_element(By.XPATH, (f"/html/body/table[3]/tbody/tr/td[4]/table[1]/tbody/tr/td[{var}]/a")).click()
+        time.sleep(5)
 a=[]
 b=[]        
 c=[]
