@@ -1,8 +1,5 @@
 # 필요 라이브러리 임포트
 import pandas as pd
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-import time
 import requests
 from bs4 import BeautifulSoup as bs
 # 필요 리스트 생성
